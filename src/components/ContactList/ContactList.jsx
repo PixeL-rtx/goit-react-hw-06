@@ -14,7 +14,7 @@ const ContactList = () => {
   return (
     <ul className={css.list}>
       {visibleContact.map((data) => {
-        <li>
+        <li className={css.ContactList}>
           <Contact key={data.id} data={data} />
         </li>;
       })}

@@ -9,7 +9,7 @@ function App() {
       <p className={css.title}> Phonebook</p>
       <ContactForm />
       <SearchBox />
-      <div className={css.ContactList}>
+      <div>
         <ContactList />
       </div>
     </div>

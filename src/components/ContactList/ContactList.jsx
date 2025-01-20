@@ -5,19 +5,17 @@ import css from "./ContactList.module.css";
 const ContactList = () => {
   const contacts = useSelector((state) => state.contacts.items);
 
-  const filters = useSelector((state) => state.filters.name);
+  const filter = useSelector((state) => state.filters.name);
 
-  const visibleContact = contacts.filter(({ name }) =>
-    name.toLowerCase().includes(filters)
+  const visibleContacts = contacts.filter(({ name }) =>
+    name.toLowerCase().includes(filter.toLowerCase())
   );
 
   return (
     <ul className={css.list}>
-      {visibleContact.map((data) => {
-        <li className={css.ContactList}>
-          <Contact key={data.id} data={data} />
-        </li>;
-      })}
+      {visibleContacts.map((data) => (
+        <Contact key={data.id} data={data} />
+      ))}
     </ul>
   );
 };

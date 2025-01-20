@@ -10,11 +10,11 @@ export default function Contact({ data: { name, number, id } }) {
   return (
     <li className={css.item}>
       <ul>
-        <li className={css.itemContact}>
+        <li className={css.contact}>
           <IoIosContact />
           <p>{name}</p>
         </li>
-        <li className={css.itemContact}>
+        <li className={css.contact}>
           <MdPhoneInTalk />
           <p>{number}</p>
         </li>

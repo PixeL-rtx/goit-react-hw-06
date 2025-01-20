@@ -9,8 +9,8 @@ const SearchBox = () => {
   const dispatch = useDispatch();
 
   const handleChange = (event) => {
-    setQuery(event.target.value.trim().toLowersCase());
-    dispatch(changeFilter(event.target.value.trim().toLowersCase()));
+    setQuery(event.target.value.trim().toLowerCase());
+    dispatch(changeFilter(event.target.value.trim().toLowerCase()));
   };
 
   return (
